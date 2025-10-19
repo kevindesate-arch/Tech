@@ -1,0 +1,237 @@
+body {
+            background-color: #121212; /* Dark background */
+            color: white; /* White text for the body */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            scroll-behavior: smooth; /* Enables smooth scrolling on link clicks */
+        }
+
+        header {
+            background-color: #1c1c1c;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #00d9ff;
+            position: sticky;
+            top: 0;
+        }
+
+        .menu-icon {
+            display: none; /* Hidden by default on desktop */
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .menu-icon .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            border-radius: 3px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-logo {
+            display: none; /* Hide logo in nav on desktop */
+            height: auto;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #00d9ff; /* Neon Blue */
+            text-shadow: 0 0 5px #00d9ff, 0 0 8px #00d9ff; /* Neon glow effect */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00d9ff;
+        }
+
+        /* Style for the currently active navigation link */
+        nav a.active {
+            color: #00d9ff;
+        }
+
+        main, section {
+            padding: 2rem 5%;
+        }
+
+        section {
+            min-height: 80vh; /* Gives sections height to demonstrate scrolling */
+            scroll-margin-top: 5rem; /* Offset for the sticky header */
+            border-bottom: 1px solid #333;
+        }
+
+        /* Home Section Styling */
+        #home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertical centering */
+            align-items: center;     /* Horizontal centering */
+            text-align: center;      /* Ensures text inside elements is centered */
+        }
+
+        /* Style for the "Join Now" button in the home section */
+        #home .btn {
+            margin-top: 1rem;
+        }
+
+        /* Hero Image Placeholder */
+        .hero-image {
+            width: 100%;
+            max-width: 500px; /* Makes the image smaller */
+            height: auto;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 8px #00d9ff, 0 0 20px #00d9ff; /* Glowing neon effect */
+        }
+
+        /* Ad Placeholder Styling */
+        .ad-placeholder {
+            width: 100%;
+            max-width: 500px; /* Match the hero-image width for alignment */
+            margin-top: 2.5rem; /* Space from the button above */
+            padding: 3rem 1rem;
+            border: 2px dashed #444;
+            border-radius: 8px;
+            color: #666;
+        }
+
+        /* About Section List */
+        #about ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #about li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Terms Section List */
+        #terms ol {
+            padding-left: 20px; /* Keep the default number indentation */
+        }
+
+        #terms li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        /* --- Refactored Button and Form Styles --- */
+
+        /* General Button Style */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #00d9ff;
+            color: #121212;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #00b8d4;
+            transform: translateY(-3px); /* Lifts the button on hover */
+            box-shadow: 0 4px 12px rgba(0, 217, 255, 0.4); /* Adds a glow on hover */
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 2rem auto; /* Center the form */
+        }
+
+        form label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        form input, form select {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 4px;
+            padding: 0.75rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        form input:focus, form select:focus {
+            outline: none;
+            border-color: #00d9ff;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: flex; /* Show the icon on mobile */
+            }
+
+            nav {
+                position: absolute;
+                top: 100%; /* Position below the header */
+                left: 0;
+                width: 100%;
+                background-color: #1c1c1c;
+                display: none; /* Hide nav by default */
+            }
+
+            nav.active {
+                display: block; /* Show nav when active */
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding: 1.5rem 0;
+                gap: 2rem;
+            }
+
+            section {
+                scroll-margin-top: 5rem; /* Reset to original offset */
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-logo {
+                display: block; /* Show logo in mobile nav */
+                margin: 1.5rem auto 1rem; /* Center and add spacing */
+                max-width: 120px;
+            }
+        }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Week 2025</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>STUTechWeek</h1>
+        <button class="menu-icon" id="menu-toggle" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav id="main-nav">
+        <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#terms">Terms and condition</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <img src="Landing Page Banner.jpg" alt="STUTechWeek event banner" class="hero-image">
+            <h2>Welcome to STUTechWeek 2025!</h2>
+            <a href="#register" class="btn">Join Now</a>
+            <div class="ad-placeholder">
+                <img src="Banner Ad.png" alt="">
+            </div>
+        </section>
+        <section id="register">
+            <h2>Register</h2>
+            <form action="#" method="POST">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="contact">Contact</label>
+                <input type="tel" id="contact" name="contact" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <label for="role">I am a...</label>
+                <select id="role" name="role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="enthusiast">Tech Enthusiast</option>
+                </select>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <p>STUTechWeek is our premier annual academic event dedicated to the celebration of technology and innovation. It's a dynamic platform for students, faculty, and industry professionals to come together, share knowledge, and explore the future of tech.</p>
+            <h3>What to Expect:</h3>
+            <ul>
+                <li><strong>Technology Exhibits:</strong> Explore cutting-edge projects and research from various departments. See firsthand the innovative solutions our students are building.</li>
+                <li><strong>Hands-on Workshops:</strong> Participate in interactive sessions led by experts. Learn new skills in areas like AI, cybersecurity, web development, and more.</li>
+                <li><strong>Thrilling Competitions:</strong> Test your skills and compete against your peers in exciting challenges, including hackathons, coding duels, and robotics contests.</li>
+            </ul>
+        </section>
+        <section id="terms">
+            <h2>Terms and condition</h2>
+            <p>By registering for and participating in STUTechWeek, you agree to the following terms and conditions:</p>
+            <ol>
+                <li><strong>Registration:</strong> All attendees must be registered. Registrations are non-transferable. Any fees paid are non-refundable.</li>
+                <li><strong>Code of Conduct:</strong> All participants are expected to behave professionally and respectfully. Harassment, discrimination, or any disruptive behavior will not be tolerated and may result in immediate removal from the event without a refund.</li>
+                <li><strong>Photography and Videography:</strong> By attending, you grant the organizers permission to capture and use your image in photographs, videos, and any other media for promotional and archival purposes.</li>
+                <li><strong>Liability:</strong> The event organizers are not responsible for any lost or damaged personal property. Participation in all activities is at your own risk.</li>
+                <li><strong>Event Changes:</strong> The organizers reserve the right to make changes to the event schedule, speakers, or content without prior notice.</li>
+            </ol>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
